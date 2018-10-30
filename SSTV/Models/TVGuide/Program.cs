@@ -7,5 +7,19 @@ namespace SSTV.Models.TVGuide
 {
     public class Program
     {
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public DateTime BroadcastingTime { get; set; }
+        public DateTime BroadcastingDate { get; set; }
+        public int Duration { get; set; }
+        public string Informations { get; set; }
+
+        public List<Category> Categories { get; set; }
+
+        public Program()
+        {
+            Categories = new List<Category>();
+        }
+
     }
 }
