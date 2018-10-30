@@ -6,6 +6,6 @@ using System.Web;
 namespace SSTV.Models.TVGuide
 {
     public class TVStation
-    {//
+    {//He, hej. Funkar det här?
     }
 }
