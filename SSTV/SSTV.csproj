@@ -163,9 +163,7 @@
     <Compile Include="Models\TestResources\Lists\Lists.cs" />
     <Compile Include="Models\TVGuide\Category.cs" />
     <Compile Include="Models\TVGuide\Program.cs" />
-    <Compile Include="Models\TVGuide\TablueView.cs" />
     <Compile Include="Models\TVGuide\TVChannel.cs" />
-    <Compile Include="Models\TVGuide\TvGuideView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

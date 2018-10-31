@@ -15,7 +15,7 @@ namespace SSTV.Models.TVGuide
 
         public TVChannel()
         {
-            TVPrograms = new List<Program>();
+            //TVPrograms = new List<Program>();
         }
     }
 }

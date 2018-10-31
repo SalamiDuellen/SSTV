@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SSTV.Models.TVGuide.TablueView>
+﻿@model IEnumerable<SSTV.Models.TVGuide.TVChannel>
 
 @{
     ViewBag.Title = "Program";
@@ -10,14 +10,17 @@
 <div class="container text-center">
     <div id="tvchannel">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div id="imgDiv">
-                    <a href="programpage.html">
-                        <img src="Images/svt1.png" class="img-responsive" alt="SVT1">
-                    </a>
-                </div>
-                <div class="list-group">
-                    <ul id="programlist">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div id="imgDiv">
+                        <a href="programpage.html">
+                            <img src="Images/svt1.png" class="img-responsive" alt="SVT1">
+                        </a>
+                    </div>
+                    <div class="list-group">
+
                         @*<th>
                                     @Html.DisplayNameFor(model => model.Channel.Name)
                                 </th>
@@ -35,16 +38,11 @@
                                 </th>
                                 <th></th>
                             </tr>*@
-
-                        @foreach (var item in Model)
-                        {
-
-                            foreach (var program in item.Programs)
+                        <ul id="programlist">
+                            @foreach (var program in item.TVPrograms)
                             {
-
-
                                 <li>
-                                    @Html.DisplayFor(modelItem => item.Channel.Name)
+                                    @Html.DisplayFor(modelItem => item.Name)
                                 </li>
                                 <li>
                                     @Html.DisplayFor(modelItem => program.Title)
@@ -64,16 +62,16 @@
                                         @Html.ActionLink("Delete", "Delete", new { id=item.ID })
                                     </td>*@
                             }
-                        }
-                    </ul>
-                    <p>
-                        @Html.ActionLink("Create New", "Create")
-                    </p>
+                        </ul>
+                        <p>
+                            @Html.ActionLink("Create New", "Create")
+                        </p>
+                    </div>
                 </div>
+                        }
             </div>
         </div>
     </div>
-</div>
 
 
 
