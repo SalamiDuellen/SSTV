@@ -8,20 +8,6 @@ namespace SSTV.Models.StaticResources.Lists
 {
     public class StaticLists
     {
-        private List<TVChannel> AddTvChannels()
-        {
-            List<TVChannel> tvChannels = new List<TVChannel>
-            {
-                new TVChannel{ID=1,Name="SVT1"},
-                new TVChannel{ID=2,Name="SVT2"},
-                new TVChannel{ID=3,Name="TV3"},
-                new TVChannel{ID=4,Name="TV4"},
-                new TVChannel{ID=5,Name="Kanal 5"}
-            };
-
-            return tvChannels;
-        }
-
         private void AddPrograms()
         {
             Category category = new Category();
@@ -111,7 +97,7 @@ namespace SSTV.Models.StaticResources.Lists
         private void AddCategory()
         {
             Category category = new Category();
-            
+
             List<Category> categories = new List<Category>
             {
                 new Category { ID = 1, Name = "Thiller" },
