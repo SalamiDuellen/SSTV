@@ -154,13 +154,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProgramController.cs" />
+    <Compile Include="Controllers\TVChannelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\StaticResourses\Lists\StaticLists.cs" />
+    <Compile Include="Models\SSTVContext.cs" />
+    <Compile Include="Models\TestResources\Lists\Lists.cs" />
     <Compile Include="Models\TVGuide\Category.cs" />
     <Compile Include="Models\TVGuide\Program.cs" />
+    <Compile Include="Models\TVGuide\TablueView.cs" />
     <Compile Include="Models\TVGuide\TVChannel.cs" />
+    <Compile Include="Models\TVGuide\TvGuideView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +173,19 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Images\aktuellt.jpg" />
+    <Content Include="Images\avengers_thanos.jpg" />
+    <Content Include="Images\barnkanalen.png" />
+    <Content Include="Images\HTMLtag.png" />
+    <Content Include="Images\kanal4.png" />
+    <Content Include="Images\kanal5.png" />
+    <Content Include="Images\markupProfile.png" />
+    <Content Include="Images\samycketbattre.jpg" />
+    <Content Include="Images\svt1.png" />
+    <Content Include="Images\svt2.png" />
+    <Content Include="Images\tv3.jpg" />
+    <Content Include="Images\tvIcon.png" />
+    <Content Include="Scripts\script.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -202,6 +220,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\TVChannel\Create.cshtml" />
+    <Content Include="Views\TVChannel\Delete.cshtml" />
+    <Content Include="Views\TVChannel\Details.cshtml" />
+    <Content Include="Views\TVChannel\Edit.cshtml" />
+    <Content Include="Views\TVChannel\Index.cshtml" />
+    <Content Include="Views\Program\Create.cshtml" />
+    <Content Include="Views\Program\Delete.cshtml" />
+    <Content Include="Views\Program\Details.cshtml" />
+    <Content Include="Views\Program\Edit.cshtml" />
+    <Content Include="Views\Program\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

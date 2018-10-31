@@ -10,10 +10,12 @@ namespace SSTV.Models.TVGuide
         public int ID { get; set; }
         public string Name { get; set; }
         public List<Program> TVPrograms { get; set; }
+        public Program Program { get; set; }
+
 
         public TVChannel()
         {
-            //TVPrograms = new List<Program>();
+            TVPrograms = new List<Program>();
         }
     }
 }

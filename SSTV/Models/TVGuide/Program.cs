@@ -12,6 +12,7 @@ namespace SSTV.Models.TVGuide
         public DateTime Broadcasting { get; set; }
         public int Duration { get; set; }
         public string Informations { get; set; }
+        public TVChannel Channel { get; set; }
 
         public List<Category> Categories { get; set; }
 
