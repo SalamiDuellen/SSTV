@@ -5,12 +5,15 @@ using System.Web;
 
 namespace SSTV.Models.TVGuide
 {
-    public class TVStation
+    public class TVChannel
     {//He, hej. Funkar det här?
         public int ID { get; set; }
         public string Name { get; set; }
-        public List<Program> TVProgram { get; set; }
+        public List<Program> TVPrograms { get; set; }
 
-
+        public TVChannel()
+        {
+            //TVPrograms = new List<Program>();
+        }
     }
 }
