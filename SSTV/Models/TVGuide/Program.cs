@@ -9,6 +9,7 @@ namespace SSTV.Models.TVGuide
     {
         public int ID { get; set; }
         public string Title { get; set; }
+        public DateTime StartDate { get; set; }
         public DateTime Broadcasting { get; set; }
         public int Duration { get; set; }
         public string Informations { get; set; }
