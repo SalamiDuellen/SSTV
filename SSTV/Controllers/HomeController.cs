@@ -13,14 +13,14 @@ namespace SSTV.Controllers
 {
     public class HomeController : Controller
     {
-        private TVChannel tvChannel = new TVChannel();
+        //private TVChannel tvChannel = new TVChannel(); //Tror inte den används
 
         public ActionResult Index()
         {
             var program = TvChannelList();
             return View(program.ToList());
 
-            //return View(tvChannel.TVPrograms);
+            //return View(tvChannel.TVPrograms); //Tror inte den används
         }
 
         public ActionResult About()
@@ -36,12 +36,14 @@ namespace SSTV.Controllers
 
             return View();
         }
-            public ActionResult Search()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        //public ActionResult Search()
+        //{
+        //    string category = "Thriller";
+        //    Search search = new Search();
+        //    List<Program> searchResult = search.SearchByCategory(category);
+        //    return View(searchResult);
+        //}
+      
 
     }
 }
