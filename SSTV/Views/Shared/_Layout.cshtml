@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - SeeSharpTV</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -22,8 +22,8 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#"><i class="fas fa-home fa-lg"></i></a></li>
-                        <li><a href="aboutus.html">Om oss</a></li>
-                        <li><a href="contact.html">Kontakta oss</a></li>
+                        <li><a href="/Home/About">Om oss</a></li>
+                        <li><a href="/Home/Contact">Kontakta oss</a></li>
                         <li>
                             <div class="ui-widget">
                                 <!-- <label for="tags">Tags: </label>
@@ -55,8 +55,8 @@
     </div>
 
     <footer class="container-fluid text-center">
-        <a href="aboutus.html"> Om oss </a><br />
-        <a href="contact.html"> Kontakta oss </a>
+        <a href="/Home/About"> Om oss </a><br />
+        <a href="/Home/Contact"> Kontakta oss </a>
     </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

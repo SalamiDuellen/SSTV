@@ -1,17 +1,18 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Kontakta oss";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@*<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>*@
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<section>
+    <form id="contactusform" method="POST" action="">
+        <label for="name">Namn:</label>
+        <input type="text" class="form-control" id="name">
+        <label for="email">E-mail:</label>
+        <input type="text" class="form-control" id="email">
+        <label for="comment">Meddelande:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        <input type="submit" value="Submit">
+        </div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</section>
