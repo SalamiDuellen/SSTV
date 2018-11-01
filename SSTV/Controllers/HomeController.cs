@@ -16,7 +16,10 @@ namespace SSTV.Controllers
 
         public ActionResult Index()
         {
-            return View(tvChannel.TVPrograms);
+            var program = Lists.TvChannelList();
+            return View(program.ToList());
+
+            //return View(tvChannel.TVPrograms);
         }
 
         public ActionResult About()
