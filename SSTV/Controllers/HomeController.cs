@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SSTV.Models;
-using SSTV.Models.TestResources.Lists;
 using SSTV.Models.TVGuide;
+using static SSTV.Models.TestResources.Lists.Lists;
+
 
 
 namespace SSTV.Controllers
@@ -16,7 +17,7 @@ namespace SSTV.Controllers
 
         public ActionResult Index()
         {
-            var program = Lists.TvChannelList();
+            var program = TvChannelList();
             return View(program.ToList());
 
             //return View(tvChannel.TVPrograms);
@@ -30,6 +31,12 @@ namespace SSTV.Controllers
         }
 
         public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+            public ActionResult Search()
         {
             ViewBag.Message = "Your contact page.";
 
