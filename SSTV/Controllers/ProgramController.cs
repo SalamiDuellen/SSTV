@@ -15,7 +15,7 @@ namespace SSTV.Controllers
     public class ProgramController : Controller
     {
         private SSTVContext db = new SSTVContext();
-        // GET: Program
+        // GET: TVProgram
         public ActionResult Index()
         {
            var program = Lists.TvChannelList();
@@ -23,7 +23,7 @@ namespace SSTV.Controllers
 
         }
 
-        // GET: Program/Details/5
+        // GET: TVProgram/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,13 +38,13 @@ namespace SSTV.Controllers
             return View(program);
         }
 
-        // GET: Program/Create
+        // GET: TVProgram/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Program/Create
+        // POST: TVProgram/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -61,7 +61,7 @@ namespace SSTV.Controllers
             return View(program);
         }
 
-        // GET: Program/Edit/5
+        // GET: TVProgram/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,7 +76,7 @@ namespace SSTV.Controllers
             return View(program);
         }
 
-        // POST: Program/Edit/5
+        // POST: TVProgram/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -92,7 +92,7 @@ namespace SSTV.Controllers
             return View(program);
         }
 
-        // GET: Program/Delete/5
+        // GET: TVProgram/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,7 +107,7 @@ namespace SSTV.Controllers
             return View(program);
         }
 
-        // POST: Program/Delete/5
+        // POST: TVProgram/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

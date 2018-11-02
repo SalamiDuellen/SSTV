@@ -9,6 +9,8 @@ namespace SSTV.Models.TVGuide
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public Program TVProgram { get; set; }
+
 
     }
 }
