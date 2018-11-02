@@ -178,7 +178,7 @@ namespace SSTV.Models.TestResources.Lists
                 TVPrograms = new List<Program>
                 {
                 new Program{ID= 9,Title = "När lammen tystnar",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
-                    Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }} },
+                    Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
                  new Program{ID= 10,Title = "Du är vad du äter",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" } } },
