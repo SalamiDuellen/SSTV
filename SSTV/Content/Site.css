@@ -1,7 +1,8 @@
 ﻿body {
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     padding-bottom: 20px;
 }
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -41,14 +42,61 @@ textarea {
     margin-bottom: 5%;
 }
 
-.navbar {
+/*#region SiteNavigation */
+.navbar-default {
+    background-color: #BDD4DE;
+    border-color: #e7e7e7;
+    margin-bottom: 0px;
+}
+
+    .navbar-default .navbar-brand {
+        color: #000;
+    }
+
+        .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+            color: #e7e7e7;
+            background-color: #3F5765;
+        }
+
+
+    .navbar-default .navbar-nav > li > a {
+        color: #000
+    }
+
+        .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+            background-color: #3F5765;
+            color: #e7e7e7
+        }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+        background-color: #3F5765;
+        color: #e7e7e7
+    }
+/*#endregion */
+
+
+.pagination{
+    width:100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*#region Old SiteNavigation REMOVE? */
+
+/*.navbar-default .navbar-nav > li > a {
+        color: #000;
+        background: #BDD4DE;
+    }*/
+
+
+/*.navbar {
     background: #BDD4DE;
     color: #000;
     margin-bottom: 0;
     border-radius: 0;
-}
-/*texten på listitem ändrats till svart*/
-.navbar-inverse .navbar-nav > li > a {
+}*/
+/*/*texten på listitem ändrats till svart*/
+/*.navbar-inverse .navbar-nav > li > a {
     color: #000;
     background: #BDD4DE;
 }
@@ -57,23 +105,23 @@ textarea {
 .navbar-inverse .navbar-nav > .active > a:hover {
     background-color: #BDD4DE;
     color: #fff;
-}
-
-.navbar-inverse .navbar-nav > li:hover {
+}*/
+/*.navbar-inverse .navbar-nav > li:hover {
     color: #000;
     background-color: #3F5765;
-}
-
-li form {
+}*/
+/*li form {
     padding-top: 15px;
     padding-bottom: 0px;
-}
+}*/
 
-/*Gör så att sökformuläret inte markeras när man hovrar över*/
-#topnavsearch:hover {
+/*/*Gör så att sökformuläret inte markeras när man hovrar över*/
+/*#topnavsearch:hover {
     background-color: #BDD4DE;
     float: right;
-}
+}*/
+
+/*#endregion */
 
 #imgDiv {
     width: 100%;
