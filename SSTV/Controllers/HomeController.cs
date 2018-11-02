@@ -13,14 +13,13 @@ namespace SSTV.Controllers
 {
     public class HomeController : Controller
     {
-        [ActionName("Index")]
         [HttpGet]
-        public ActionResult GetFiltredPrograms(string category)
+        public ActionResult Index(string category)
         {
             List<TVChannel> tvChannels = TvChannelList();
             Search search = new Search();
 
-            if (category==null)
+            if (category == null)
             {
                 var program = TvChannelList();
                 return View(program.ToList());
@@ -44,14 +43,5 @@ namespace SSTV.Controllers
 
             return View();
         }
-        //public ActionResult Search()
-        //{
-        //    string category = "Thriller";
-        //    Search search = new Search();
-        //    List<TVProgram> searchResult = search.SearchByCategory(category);
-        //    return View(searchResult);
-        //}
-
-
     }
 }

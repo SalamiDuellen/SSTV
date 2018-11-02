@@ -9,8 +9,15 @@ namespace SSTV.Models.TVGuide
     {
         public int ID { get; set; }
         public string Title { get; set; }
-        public DateTime StartDate { get; set; }
         public DateTime Broadcasting { get; set; }
+        public string BroadcastingGUI
+        {
+            get=> Broadcasting.TimeOfDay.ToString().Remove(5);
+            set
+            {
+                Broadcasting.TimeOfDay.ToString().Remove(4);
+            }
+        }
         public int Duration { get; set; }
         public string Informations { get; set; }
         public TVChannel Channel { get; set; }
