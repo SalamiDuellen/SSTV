@@ -78,23 +78,24 @@
                                 </th>
                                 <th></th>
                             </tr>*@
-                        <ul id="programlist">
+                        <ul style="text-align:left" id="programlist">
                             @foreach (var program in item.TVPrograms)
                             {
                                 @*<li>
                                         @Html.DisplayFor(modelItem => item.Name)
                                     </li>*@
+                            <li>
+                                @Html.DisplayFor(modelItem => program.Broadcasting)
+                                @Html.DisplayFor(modelItem => program.Title)
+                            </li>
                                 <li>
-                                    @Html.DisplayFor(modelItem => program.Title)
+                                    @Html.DisplayFor(modelItem => program.Duration) min
                                 </li>
                                 <li>
-                                    @Html.DisplayFor(modelItem => program.Broadcasting)
+                                    @Html.DisplayFor(modellItem => program.Categories)
                                 </li>
                                 <li>
-                                    @Html.DisplayFor(modelItem => program.Duration)
-                                </li>
-                                <li>
-                                    @Html.DisplayFor(modelItem => program.Informations)
+                                    @*This is some nice informations*@
                                 </li>
                             }
                         </ul>
