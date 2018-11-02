@@ -111,11 +111,16 @@
                                         @Html.DisplayFor(modelItem => item.Name)
                                     </li>*@
                                 <li>
-                                    @Html.DisplayFor(modelItem => program.BroadcastingGUI)
                                     @Html.DisplayFor(modelItem => program.Title)
                                 </li>
                                 <li>
-                                    @Html.DisplayFor(modelItem => program.Duration) min
+                                    @Html.DisplayFor(modelItem => program.StartTime)
+                                </li>
+                                <li>
+                                    @Html.DisplayFor(modelItem => program.Informations)
+                                </li>
+                                <li>
+                                    @Html.DisplayFor(modelItem => program.EndTime)
                                 </li>
                                 <li>
                                     @*This is some nice informations*@

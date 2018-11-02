@@ -7,17 +7,28 @@ namespace SSTV.Models.TVGuide
 {
     public class Program
     {
+        string _endTime;
         public int ID { get; set; }
         public string Title { get; set; }
         public DateTime Broadcasting { get; set; }
-        public string BroadcastingGUI
+        public string StartTime
         {
-            get=> Broadcasting.TimeOfDay.ToString().Remove(5);
+            get => Broadcasting.TimeOfDay.ToString().Remove(5);
             set
             {
-                Broadcasting.TimeOfDay.ToString().Remove(4);
+                Broadcasting.TimeOfDay.ToString().Remove(5);
             }
         }
+        public string EndTime
+        {
+            get { return Broadcasting.AddMinutes(Duration).TimeOfDay.ToString().Remove(5); }
+            set
+            {
+                Broadcasting.AddMinutes(Duration).TimeOfDay.ToString().Remove(5);
+            }
+        }
+
+
         public int Duration { get; set; }
         public string Informations { get; set; }
         public TVChannel Channel { get; set; }
