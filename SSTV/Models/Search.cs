@@ -23,16 +23,24 @@ namespace SSTV.Models
                     {
                         if (c.Name == category)
                         {
-                            //tempTvChannel = channel;
-                            tempTvChannel.TVPrograms.Add(program);
+                            if (tempTvChannel.Name != channel.Name)
+                            {
+                                tempTvChannel = channel;
+
+                                tempTvChannel.TVPrograms = new List<Program>
+                                {
+                                     program
+                                };
+                            }
+                            else tempTvChannel.TVPrograms.Add(program);
                             //programs.Add(program);
-                            searchResults.Add(tempTvChannel);
                         }
 
                     }
                 }
                 //channel.TVPrograms = programs;
                 //tvChannels.SelectMany(x => x.TVPrograms.Where(y => y.Categories.Any(z => z.Name == category)));
+                searchResults.Add(tempTvChannel);
             }
             return searchResults;
         }
