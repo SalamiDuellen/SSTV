@@ -26,8 +26,13 @@ namespace SSTV.Controllers
             }
 
             var searchResult = search.SearchByCategory(category, tvChannels);
+            
 
             return View(searchResult.ToList());
+        }
+           public ActionResult BrowseGenre(string category)
+        {
+            return View();
         }
 
         public ActionResult About()

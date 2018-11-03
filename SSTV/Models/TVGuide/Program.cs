@@ -30,7 +30,7 @@ namespace SSTV.Models.TVGuide
 
 
         public int Duration { get; set; }
-        public string Informations { get; set; }
+        public string Details { get; set; }
         public TVChannel Channel { get; set; }
 
         public List<Category> Categories { get; set; }

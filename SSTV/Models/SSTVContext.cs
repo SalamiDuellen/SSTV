@@ -22,5 +22,7 @@ namespace SSTV.Models
         public System.Data.Entity.DbSet<SSTV.Models.TVGuide.TVChannel> TVChannels { get; set; }
 
         public System.Data.Entity.DbSet<SSTV.Models.TVGuide.Program> Programs { get; set; }
+
+        public System.Data.Entity.DbSet<SSTV.Models.TVGuide.Category> Categories { get; set; }
     }
 }
