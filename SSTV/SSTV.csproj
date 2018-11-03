@@ -166,7 +166,6 @@
     <Compile Include="Models\TVGuide\Program.cs" />
     <Compile Include="Models\TVGuide\TVChannel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\VMHome.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
