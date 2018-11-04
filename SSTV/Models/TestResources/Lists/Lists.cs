@@ -134,16 +134,16 @@ namespace SSTV.Models.TestResources.Lists
                 Name = "SVT1",
                 TVPrograms = new List<Program>
                   {
-                new Program{ID= 1,Title = "Bonde söker en fru",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                new Program{ID= 1,Title = "Bonde söker en fru",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                 new Program{ID= 2,Title = "Mästerkocken",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                 new Program{ID= 2,Title = "Mästerkocken",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                  new Program{ID= 3,Title = "Dexter",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                  new Program{ID= 3,Title = "Dexter",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                   new Program{ID= 4,Title = "Teletubbies",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                   new Program{ID= 4,Title = "Teletubbies",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
             }
             };
@@ -155,16 +155,16 @@ namespace SSTV.Models.TestResources.Lists
                 Name = "SVT2",
 
                 TVPrograms = new List<Program> {
-              new Program{ID= 5,Title = "Desperate housewives",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+              new Program{ID= 5,Title = "Desperate housewives",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                new Program{ID= 6,Title = "Glamour",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                new Program{ID= 6,Title = "Glamour",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                  new Program{ID= 7,Title = "Rise and fall of an empire",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                  new Program{ID= 7,Title = "Rise and fall of an empire",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Dokumentär" } } },
 
-                   new Program{ID= 8,Title = "Most evil",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                   new Program{ID= 8,Title = "Most evil",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Dokumentär" } } },
                    }
             };
@@ -177,16 +177,16 @@ namespace SSTV.Models.TestResources.Lists
                 Name = "TV3",
                 TVPrograms = new List<Program>
                 {
-                new Program{ID= 9,Title = "När lammen tystnar",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                new Program{ID= 9,Title = "När lammen tystnar",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                 new Program{ID= 10,Title = "Du är vad du äter",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                 new Program{ID= 10,Title = "Du är vad du äter",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" } } },
 
-                  new Program{ID= 11,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                  new Program{ID= 11,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" } } },
 
-                   new Program{ID= 12,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                   new Program{ID= 12,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" } } },
                    }
             };
@@ -199,16 +199,16 @@ namespace SSTV.Models.TestResources.Lists
                 Name = "TV4",
                 TVPrograms = new List<Program>
                 {
-               new Program{ID= 13,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+               new Program{ID= 13,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                 new Program{ID= 14,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                 new Program{ID= 14,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                  new Program{ID= 15,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                  new Program{ID= 15,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                   new Program{ID= 16,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                   new Program{ID= 16,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
                    }
             };
@@ -221,16 +221,16 @@ namespace SSTV.Models.TestResources.Lists
                 Name = "Kanal 5",
                 TVPrograms = new List<Program>
                 {
-                new Program{ID= 17,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                new Program{ID= 17,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                 new Program{ID= 18,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                 new Program{ID= 18,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                  new Program{ID= 19,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                  new Program{ID= 19,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
 
-                   new Program{ID= 20,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Details = "This is some nice informations",
+                   new Program{ID= 20,Title = "",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
                    }
             };
