@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SSTV.Models.TVGuide.TVChannel>
+﻿@model SSTV.ViewModels.ViewModelHome
 
 @{
     ViewBag.Title = "Programtablå";
@@ -67,13 +67,20 @@
     </div>
 </div>
 
+<div>
+    @using (Html.BeginForm("Index"))
+    {
+        @Html.DropDownListFor(x => Model.Categories, new SelectList(Model.Categories, "Name"));
+        <input type="submit" value="Chose" />
+    }
 
+</div>
 
 <div class="container text-center">
     <div id="tvchannel">
         <div class="row">
 
-            @foreach (var item in Model)
+            @foreach (var item in Model.TVChannels)
             {
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     @*<div id="imgDiv">

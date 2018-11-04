@@ -11,6 +11,9 @@ namespace SSTV.Models.TVGuide
         public string Name { get; set; }
         public Program TVProgram { get; set; }
 
-
+        public override string ToString()
+        {
+            return Name; 
+        }
     }
 }
