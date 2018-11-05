@@ -7,6 +7,7 @@ namespace SSTV.Models.TVGuide
 {
     public class Program
     {
+
         string _endTime;
         public int ID { get; set; }
         public string Title { get; set; }
