@@ -19,19 +19,19 @@ namespace SSTV.Controllers
         // Har skapar en viewModel där listor för tvchannels and categories lies.
         public ViewModelHome vmHome;
         [HttpGet]
-        public ActionResult Index([Bind(Include = "Name")] Category category)
+        public ActionResult Index(string searchString)
         {
             vmHome = TvChannelList();
             Search search = new Search();
 
 
-            if (category.Name == null)
+            if (searchString == null)
             {
                 vmHome = TvChannelList();
                 return View(vmHome);
             }
-
-            vmHome.TVChannels = search.SearchByCategory(category, vmHome.TVChannels);
+            else
+            vmHome.TVChannels = search.SearchByCategory(searchString, vmHome.TVChannels);
 
             return View(vmHome);
         }

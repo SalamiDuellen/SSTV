@@ -9,7 +9,7 @@ namespace SSTV.Models
 {
     public class Search
     {
-        public List<TVChannel> SearchByCategory(Category category, List<TVChannel> tvChannels)
+        public List<TVChannel> SearchByCategory(string searchCategory, List<TVChannel> tvChannels)
         {
             List<TVChannel> searchResults = new List<TVChannel>();
             //List<Program> programs = new List<Program>();
@@ -21,7 +21,7 @@ namespace SSTV.Models
                 {
                     foreach (Category c in program.Categories)
                     {
-                        if (c.Name == category.Name)
+                        if (c.Name == searchCategory)
                         {
                             if (tempTvChannel.Name != channel.Name)
                             {
@@ -39,7 +39,6 @@ namespace SSTV.Models
                     }
                 }
                 //channel.TVPrograms = programs;
-                //tvChannels.SelectMany(x => x.TVPrograms.Where(y => y.Categories.Any(z => z.Name == category)));
                 searchResults.Add(tempTvChannel);
             }
             return searchResults;
