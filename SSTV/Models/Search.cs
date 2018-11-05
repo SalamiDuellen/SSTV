@@ -1,5 +1,4 @@
 ﻿using SSTV.Models.TVGuide;
-using SSTV.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +9,9 @@ namespace SSTV.Models
 {
     public class Search
     {
-        public List<VMHome> SearchByCategory(string category, List<TVChannel> tvChannels)
+        public List<TVChannel> SearchByCategory(string category, List<TVChannel> tvChannels)
         {
-            List<VMHome> searchResults = new List<VMHome>();
-            VMHome vmHome;
+            List<TVChannel> searchResults = new List<TVChannel>();
             //List<Program> programs = new List<Program>();
             TVChannel tempTvChannel = new TVChannel();
 
@@ -25,23 +23,25 @@ namespace SSTV.Models
                     {
                         if (c.Name == category)
                         {
-                            vmHome = new VMHome
+                            if (tempTvChannel.Name != channel.Name)
                             {
-                                ProgramTitle = program.Title,
-                                ProgramStartTime = program.StartTime,
-                                ProgramEndTime = program.EndTime,
-                                ProgramDetails = program.Details,
-                                TVChannelName = channel.Name
-                            };
-                            searchResults.Add(vmHome);
-                        }
-                        //programs.Add(program);
-                    }
+                                tempTvChannel = channel;
 
+                                tempTvChannel.TVPrograms = new List<Program>
+                                {
+                                     program
+                                };
+                            }
+                            else tempTvChannel.TVPrograms.Add(program);
+                            //programs.Add(program);
+                        }
+
+                    }
                 }
+                //channel.TVPrograms = programs;
+                //tvChannels.SelectMany(x => x.TVPrograms.Where(y => y.Categories.Any(z => z.Name == category)));
+                searchResults.Add(tempTvChannel);
             }
-            //channel.TVPrograms = programs;
-            //tvChannels.SelectMany(x => x.TVPrograms.Where(y => y.Categories.Any(z => z.Name == category)));
             return searchResults;
         }
     }
