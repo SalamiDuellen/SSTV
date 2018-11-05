@@ -15,11 +15,12 @@ namespace SSTV.Controllers
     public class ProgramController : Controller
     {
         private SSTVContext db = new SSTVContext();
+
         // GET: TVProgram
         public ActionResult Index()
         {
            var program = Lists.TvChannelList();
-            return View(program.ToList());
+            return View(program);
 
         }
 

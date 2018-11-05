@@ -8,11 +8,11 @@ namespace SSTV.Models.TVGuide
 {
     public class TablueView
     {
-        public TVChannel Channel { get; set; }
+        //public TVChannel Channel { get; set; }
 
-        public Program Program { get; set; }
+        //public Program Program { get; set; }
 
-        public List<Program> Programs { get;  set; }
+        //public List<Program> Programs { get;  set; }
 
     }
 }

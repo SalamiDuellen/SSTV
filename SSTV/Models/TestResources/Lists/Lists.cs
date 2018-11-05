@@ -1,4 +1,5 @@
 ﻿using SSTV.Models.TVGuide;
+using SSTV.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -122,17 +123,19 @@ namespace SSTV.Models.TestResources.Lists
         #endregion
 
         #region
-        public static List<TVChannel> TvChannelList()
+        public static ViewModelHome TvChannelList()
         {
+            ViewModelHome vmHome = new ViewModelHome();
             List<TVChannel> channels = new List<TVChannel>();
             TVChannel tvChannel;
+          
 
 
-            tvChannel = new TVChannel
-            {
-                ID = 1,
-                Name = "SVT1",
-                TVPrograms = new List<Program>
+                tvChannel = new TVChannel
+                {
+                    ID = 1,
+                    Name = "SVT1",
+                    TVPrograms = new List<Program>
                   {
                 new Program{ID= 1,Title = "Bonde söker en fru",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
@@ -146,8 +149,8 @@ namespace SSTV.Models.TestResources.Lists
                    new Program{ID= 4,Title = "Teletubbies",  Broadcasting = new DateTime(2018, 11, 05, 07, 00, 00),  Duration = 30,Informations = "This is some nice informations",
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
             }
-            };
-            channels.Add(tvChannel);
+                };
+            vmHome.TVChannels.Add(tvChannel);
 
             tvChannel = new TVChannel
             {
@@ -168,7 +171,7 @@ namespace SSTV.Models.TestResources.Lists
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Dokumentär" } } },
                    }
             };
-            channels.Add(tvChannel);
+            vmHome.TVChannels.Add(tvChannel);
 
 
             tvChannel = new TVChannel
@@ -190,7 +193,8 @@ namespace SSTV.Models.TestResources.Lists
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" } } },
                    }
             };
-            channels.Add(tvChannel);
+            vmHome.TVChannels.Add(tvChannel);
+
 
 
             tvChannel = new TVChannel
@@ -212,7 +216,8 @@ namespace SSTV.Models.TestResources.Lists
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
                    }
             };
-            channels.Add(tvChannel);
+            vmHome.TVChannels.Add(tvChannel);
+
 
 
             tvChannel = new TVChannel
@@ -234,23 +239,27 @@ namespace SSTV.Models.TestResources.Lists
                     Categories = new List<Category>{ new Category { ID = 1, Name = "Thriller" }, new Category { ID = 3, Name = "Drama" } } },
                    }
             };
-            channels.Add(tvChannel);
 
-            return channels;
+            vmHome.TVChannels.Add(tvChannel);
+
+
+            return vmHome;
         }
-        #endregion
+    #endregion
 
-        private static void AddCategory()
-        {
-            Category category = new Category();
+    public static List<Category> AddCategories()
+    {
+        Category category = new Category();
 
-            List<Category> categories = new List<Category>
+        List<Category> categories = new List<Category>
             {
                 new Category { ID = 1, Name = "Thriller" },
                 new Category{ID=2,Name="Komedi"},
                 new Category{ID=3,Name="Drama"},
                 new Category{ID=4,Name="Nyheter"},
             };
-        }
+
+        return categories;
     }
+}
 }
