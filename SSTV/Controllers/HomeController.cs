@@ -42,9 +42,10 @@ namespace SSTV.Controllers
             return View();
         }
 
+
         public ActionResult Contact()
         {
-            //ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Kontakta oss";
 
             return View();
         }

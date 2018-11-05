@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SSTV.ViewModels.VMHome>
+﻿@*@model IEnumerable<SSTV.ViewModels.VMHome>*@
 
 @{
     ViewBag.Title = "Programtablå";
@@ -86,12 +86,13 @@
             </div>
         </div>
     </section>
+    </div>
 
-    <div class="container text-center">
+    @*<div class="container text-center">
         <div id="tvchannel">
-            <div class="row">
+            <div class="row">*@
 
-                @foreach (var item in Model)
+                @*@*@*@*@foreach (var item in Model)
                 {
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         @*<div id="imgDiv">
@@ -99,11 +100,11 @@
                                     <img src="Images/svt1.png" class="img-responsive" alt="SVT1">
                                 </a>
                             </div>*@
-                        <div style="font-size:18px">
+                        @*<@*div style="font-size:18px">
                             @Html.DisplayFor(modelItem => item.)
 
                         </div>
-                        <div class="list-group">
+                        <div class="list-group">*@
 
                             @*<th>
                                         @Html.DisplayNameFor(model => model.Channel.Name)
@@ -122,13 +123,13 @@
                                     </th>
                                     <th></th>
                                 </tr>*@
-                            <ul style="text-align:left" id="programlist">
+                            @*<ul style="text-align:left" id="programlist">
                                 @foreach (var program in item.TVPrograms)
                                 {
                                     @*<li>
                                             @Html.DisplayFor(modelItem => item.Name)
                                         </li>*@
-                                    <li>
+                                    @*<li>
                                         @Html.DisplayFor(modelItem => program.Title)
                                     </li>
                                     <li>
@@ -142,10 +143,10 @@
                                     </li>
                                     <li>
                                         @*This is some nice informations*@
-                                    </li>
+                                    @*</li>
                                 }
-                            </ul>
-                            <p>
+                            </ul>*@
+                            @*<p>
                                 @Html.ActionLink("Create New", "Create")
                             </p>
                         </div>
@@ -154,7 +155,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 
 
 
