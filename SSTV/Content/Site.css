@@ -42,7 +42,20 @@ textarea {
     margin-bottom: 5%;
 }
 
+
+#programlist {
+    background-color: #eaf3f7;
+    border: solid;
+    border-color: #a8bac4;
+}
+#channelname {
+    font-size: 18px;
+    border: solid;
+    border-color: #a8bac4;
+}
+
 /*#region SiteNavigation */
+
 .navbar-default {
     background-color: #BDD4DE;
     border-color: #e7e7e7;
@@ -75,9 +88,9 @@ textarea {
 /*#endregion */
 
 
-.pagination{
-    width:100%;
-    align-content:center;
+.pagination {
+    width: 100%;
+    align-content: center;
     margin-top: 0px;
     margin-bottom: 0px;
 }

@@ -21,7 +21,7 @@ namespace SSTV.Models.TVGuide
         }
         public string EndTime
         {
-            get { return Broadcasting.AddMinutes(Duration).TimeOfDay.ToString().Remove(5); }
+            get { return "Sluttid " + Broadcasting.AddMinutes(Duration).TimeOfDay.ToString().Remove(5); }
             set
             {
                 Broadcasting.AddMinutes(Duration).TimeOfDay.ToString().Remove(5);
