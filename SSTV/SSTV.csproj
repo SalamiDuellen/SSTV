@@ -166,6 +166,16 @@
     <Compile Include="ViewModels\ViewModelHome.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\master.mdf" />
+    <Content Include="App_Data\mastlog.ldf" />
+    <Content Include="App_Data\model.mdf" />
+    <Content Include="App_Data\modellog.ldf" />
+    <Content Include="App_Data\msdbdata.mdf" />
+    <Content Include="App_Data\msdblog.ldf" />
+    <Content Include="App_Data\SSTV.ldf" />
+    <Content Include="App_Data\SSTV.mdf" />
+    <Content Include="App_Data\tempdb.mdf" />
+    <Content Include="App_Data\templog.ldf" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -208,6 +218,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\error.log" />
+    <Content Include="App_Data\error1.log" />
+    <Content Include="App_Data\error2.log" />
+    <Content Include="App_Data\error3.log" />
+    <Content Include="App_Data\HkEngineEventFile_0_131859880362320000.xel" />
+    <Content Include="App_Data\HkEngineEventFile_0_131859880420380000.xel" />
+    <Content Include="App_Data\HkEngineEventFile_0_131860056094340000.xel" />
+    <Content Include="App_Data\log.trc" />
+    <Content Include="App_Data\log_1.trc" />
+    <Content Include="App_Data\log_2.trc" />
+    <Content Include="App_Data\system_health_0_131859880368080000.xel" />
+    <Content Include="App_Data\system_health_0_131859880397960000.xel" />
+    <Content Include="App_Data\system_health_0_131860056058420000.xel" />
     <None Include="bundleconfig.json" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -271,9 +294,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
