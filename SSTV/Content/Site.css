@@ -42,12 +42,18 @@ textarea {
     margin-bottom: 5%;
 }
 
+.pagination > li > a {
+    position: relative;
+    width: 20px;
+    padding-right:20px;
+}
 
 #programlist {
     background-color: #eaf3f7;
     border: solid;
     border-color: #a8bac4;
 }
+
 #channelname {
     font-size: 18px;
     border: solid;
