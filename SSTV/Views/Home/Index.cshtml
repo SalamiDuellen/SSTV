@@ -86,58 +86,28 @@
 
                 <div class="list-group">
 
-                    @*<th>
-                                @Html.DisplayNameFor(model => model.Channel.Name)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Program.Title)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Program.Broadcasting)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Program.Duration)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Program.Informations)
-                            </th>
-                            <th></th>
-                        </tr>*@
-
-
-
-
                     <ul style="text-align:left" id="programlist">
                         @foreach (var program in item.TVPrograms)
                         {
                             <li>
+                                @Html.DisplayFor(modelItem => program.StartTime)
                                 @Html.DisplayFor(modelItem => program.Title)
                             </li>
 
-                            <li>
-                                @Html.DisplayFor(modelItem => program.StartTime)
-                            </li>
-
-                            <li>
+                            @*<li>
                                 @Html.DisplayFor(modelItem => program.Informations)
                             </li>
-
                             <li>
                                 @Html.DisplayFor(modelItem => program.EndTime)
                             </li>
-
                             <li>
                                 @foreach (var category in program.Categories)
                                 {
                                     @Html.DisplayName(category.Name) <br />
                                 }
-                            </li>
+                            </li>*@
                         }
                     </ul>
-
-                    <p>
-                        @Html.ActionLink("Create New", "Create")
-                    </p>
                 </div>
             </div>
         }
