@@ -1,5 +1,4 @@
 ﻿@model SSTV.ViewModels.ViewModelHome
-@*SSTV.Models.TVGuide.Program>*@
 
 @{
     ViewBag.Title = "Programtablå";
@@ -65,13 +64,6 @@
 </div>
 
 
-@*Modal*@
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-<p data-toggle="modal" data-target="#myModal">Open Modal</p>
-
-
-
 <div class="container text-center" id="tvchannellist">
     <form>
         <label>Sök på kategori</label>
@@ -91,6 +83,7 @@
                     @Html.DisplayFor(modelItem => item.Name)
 
                 </div>
+
                 <div class="list-group">
 
                     @*<th>
@@ -117,22 +110,8 @@
                     <ul style="text-align:left" id="programlist">
                         @foreach (var program in item.TVPrograms)
                         {
-
-
                             <li>
-                                <p data-toggle="modal" href="#myModal">
-                                    @Html.DisplayFor(modelItem => program.ID)
-                                </p>
-
-                                @*@Html.ActionLink("Details", "Details", Model.)*@
-                            </li>
-
-                            //Den här kan användas istället
-                            @*@Html.ActionLink("TextLink", "ActionName", new { id = item.Id }, new { @class = "btn btn-primary", data_toggle = "modal", data_target = "#exampleModal" })*@
-                            <li>
-                                <p data-toggle="modal" href="#myModal">
-                                    @Html.DisplayFor(modelItem => program.Title)
-                                </p>
+                                @Html.DisplayFor(modelItem => program.Title)
                             </li>
 
                             <li>
@@ -153,49 +132,14 @@
                                     @Html.DisplayName(category.Name) <br />
                                 }
                             </li>
-
-                            <!-- Modal -->
-                            <div id="myModal" class="modal fade" role="dialog">
-                                <div class="modal-dialog">
-
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Modal Header</h4>
-                                        </div>
-                                        <div class="modal-body">
-
-                                            <p>
-                                                @Html.DisplayFor(modelItem => program.Title)
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-
-
-
-
-
                         }
                     </ul>
 
-
-                    @*<p>
-                            @Html.ActionLink("Create New", "Create")
-                        </p>*@
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
                 </div>
             </div>
         }
     </div>
 </div>
-
-
-
