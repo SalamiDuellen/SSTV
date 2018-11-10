@@ -4,33 +4,56 @@
     ViewBag.Title = "Programtablå";
 }
 
-
-<div class="container">
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Tidigare">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
+<div class="container-fluid">
+    <nav class="navbar navbar-light">
+        <ul class="nav navbar-nav" id="sitenav">
+            <li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
             <li><a href="#">Idag</a></li>
             <li><a href="#">Imorgon</a></li>
-            <li><a href="#">7/11 Ons</a></li>
-            <li><a href="#">8/11 Tor</a></li>
-            <li><a href="#">9/11 Fre</a></li>
-            <li><a href="#">10/11 Lör</a></li>
-            <li><a href="#">11/11 Sön</a></li>
-            <li>
-                <a href="#" aria-label="Nästa">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
+            <li><a href="#">Mån 12/11</a></li>
+            <li><a href="#">Tis 13/11</a></li>
+            <li><a href="#">Ons 14/11</a></li>
+            <li><a href="#">Tor 15/11</a></li>
+            <li><a href="#">Fre 16/11</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
         </ul>
+
+        <form class="navbar-form navbar-left" autocomplete="off" id="topnavsearch">
+            <div class="input-group">
+                <input id="inputautocomplete" type="text" class="form-control" placeholder="Sök program..." name="search">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="formButton" onclick="getProgramInfo();">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+               </div>
+        </form>
+
+        <form class="navbar-form navbar-left" autocomplete="off">
+            <div class="input-group">
+                @Html.TextBox("SearchString", null, new { @class = "form-control" })
+                <span class="input-group-btn">
+                    <button class="btn btn-default">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
     </nav>
 </div>
+@*<form>*@
+@*@Html.TextBox("searchString")*@
+@*<input type="submit" value="Sök kategori..." />*@
+@*</form>*@
+
+<div class="col-xs-12">
+    <p id="programinfo"></p>
+        <ul id="prog-info-ul"></ul>
+</div>
+
 
 @* Carousel *@
-<div class="container">
+<div class="container" @*text-center*@>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -64,52 +87,90 @@
 </div>
 
 
-<div class="container text-center" id="tvchannellist">
-    <form>
-        <label>Sök på kategori</label>
-        @Html.TextBox("searchString")
-        <input type="submit" value="Sök" />
-    </form>
-    <div class="row">
-        @foreach (var item in Model.TVChannels)
-        {
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                @*<div id="imgDiv">
-                        <a href="programpage.html">
-                            <img src="Images/svt1.png" class="img-responsive" alt="SVT1">
-                        </a>
-                    </div>*@
-                <div id="channelname">
-                    @Html.DisplayFor(modelItem => item.Name)
-
-                </div>
-
-                <div class="list-group">
-
-                    <ul style="text-align:left" id="programlist">
+<div class="container-fluid">
+    <div id="tvchannel">
+        <div class="row">
+            @foreach (var item in Model.TVChannels)
+            {
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    @*<div id="imgDiv">
+                            <a href="programpage.html">
+                                <img src="Images/svt1.png" class="img-responsive" alt="SVT1">
+                            </a>
+                        </div>*@
+                    <div id="channelheader">
+                        <h4>@Html.DisplayFor(modelItem => item.Name)</h4>
+                    </div>
+                    <ul class="list-group">
                         @foreach (var program in item.TVPrograms)
                         {
-                            <li>
+                            <li class="list-group-item">
                                 @Html.DisplayFor(modelItem => program.StartTime)
                                 @Html.DisplayFor(modelItem => program.Title)
-                            </li>
 
-                            @*<li>
-                                @Html.DisplayFor(modelItem => program.Informations)
                             </li>
-                            <li>
-                                @Html.DisplayFor(modelItem => program.EndTime)
-                            </li>
-                            <li>
-                                @foreach (var category in program.Categories)
-                                {
-                                    @Html.DisplayName(category.Name) <br />
-                                }
-                            </li>*@
                         }
                     </ul>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
 </div>
+
+
+
+
+
+@*"GAMLA GREJERNA"
+
+
+    <div class="container text-center" id="tvchannellist">
+        <form>
+                <label>Sök på kategori</label>
+                @Html.TextBox("searchString")
+                <input type="submit" value="Sök" />
+            </form>
+        <div class="row">
+            @foreach (var item in Model.TVChannels)
+            {
+                <div class="col-xs-12 col-sm-6 col-md-3" id="channelcolumns">
+                    <div id="imgDiv">
+                            <a href="programpage.html">
+                                <img src="Images/svt1.png" class="img-responsive" alt="SVT1">
+                            </a>
+                        </div>
+                    <div id="channelname">
+                        @Html.DisplayFor(modelItem => item.Name)
+
+                    </div>
+
+                    <div class="list-group">
+                        <ul id="programlist">
+                            @foreach (var program in item.TVPrograms)
+                            {
+                                <li>
+                                    <!-- Links -->
+                                    @Html.DisplayFor(modelItem => program.StartTime)
+                                    @Html.DisplayFor(modelItem => program.Title)
+                                    <br />
+                                </li>
+
+                                <li>
+                                        @Html.DisplayFor(modelItem => program.Informations)
+                                    </li>
+                                    <li>
+                                        @Html.DisplayFor(modelItem => program.EndTime)
+                                    </li>
+                                    <li>
+                                        @foreach (var category in program.Categories)
+                                        {
+                                            @Html.DisplayName(category.Name) <br />
+                                        }
+                                    </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>*@
