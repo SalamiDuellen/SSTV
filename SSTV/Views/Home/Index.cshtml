@@ -104,11 +104,14 @@
                     <ul class="list-group">
                         @foreach (var program in item.TVPrograms)
                         {
-                            <li class="list-group-item">
-                                @Html.DisplayFor(modelItem => program.StartTime)
-                                @Html.DisplayFor(modelItem => program.Title)
+                        <li class="list-group-item">
+                            @Html.DisplayFor(modelItem => program.StartTime)
+                            @Html.DisplayFor(modelItem => program.Title)
+                            <br />
+                            @Html.DisplayFor(modelItem => program.Duration) min
+                            @Html.DisplayFor(modelItem => program.Categories)
 
-                            </li>
+                        </li>
                         }
                     </ul>
                 </div>
