@@ -9,9 +9,9 @@ namespace SSTV.Models.TVGuide
     {//He, hej. Funkar det här?
         public int ID { get; set; }
         public string Name { get; set; }
-        public List<Program> TVPrograms { get; set; } = new List<Program>();
-        public Program TVProgram { get; set; }
-
+        // todo kolla upp om jag ff skapar en ny tvchannellista för kategorisöket. annars ta bort = new List...
+        public List<Program> TVPrograms { get; set; } = new List<Program>(); 
+        public Program TVProgram { get; set; } // varför är denna här?
 
         public TVChannel()
         {

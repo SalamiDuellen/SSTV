@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using SSTV.Models;
 using SSTV.Models.TVGuide;
 using static SSTV.Models.TestResources.Lists.Lists;
+using SSTV.ViewModels;
+
 
 
 
@@ -13,21 +15,25 @@ namespace SSTV.Controllers
 {
     public class HomeController : Controller
     {
+        // todo - Försöker binda dropdownlistan till propertierserna för kategorisöket.
+        // Har skapar en viewModel där listor för tvchannels and categories lies.
+        public ViewModelHome vmHome;
         [HttpGet]
-        public ActionResult Index(string category)
+        public ActionResult Index(string searchString)
         {
-            List<TVChannel> tvChannels = TvChannelList();
+            vmHome = TvChannelList();
             Search search = new Search();
 
-            if (category == null)
+
+            if (searchString == null)
             {
-                var program = TvChannelList();
-                return View(program.ToList());
+                vmHome = TvChannelList();
+                return View(vmHome);
             }
+            else
+            vmHome.TVChannels = search.SearchByCategory(searchString, vmHome.TVChannels);
 
-            var searchResult = search.SearchByCategory(category, tvChannels);
-
-            return View(searchResult.ToList());
+            return View(vmHome);
         }
 
         public ActionResult About()
@@ -37,9 +43,10 @@ namespace SSTV.Controllers
             return View();
         }
 
+
         public ActionResult Contact()
         {
-            //ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Kontakta oss";
 
             return View();
         }
