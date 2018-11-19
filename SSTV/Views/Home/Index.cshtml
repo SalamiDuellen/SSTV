@@ -4,8 +4,8 @@
     ViewBag.Title = "Programtablå";
 }
 
-<div class="container-fluid">
-    <nav class="navbar navbar-light">
+<nav class="navbar navbar-light">
+    <div class="container-fluid" id="indexsidenav">
         <ul class="nav navbar-nav" id="sitenav">
             <li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
             <li><a href="#">Idag</a></li>
@@ -39,7 +39,7 @@
                 </span>
             </div>
         </form>
-    </nav>
+    </div>
     @*<form>*@
     @*@Html.TextBox("searchString")*@
     @*<input type="submit" value="Sök kategori..." />*@
@@ -49,7 +49,7 @@
         <p id="programinfo"></p>
         <ul id="prog-info-ul"></ul>
     </div>
-</div>
+</nav>
 
 
 @* Carousel *@
@@ -104,14 +104,13 @@
                     <ul class="list-group">
                         @foreach (var program in item.TVPrograms)
                         {
-                        <li class="list-group-item">
-                            @Html.DisplayFor(modelItem => program.StartTime)
-                            @Html.DisplayFor(modelItem => program.Title)
-                            <br />
-                            @Html.DisplayFor(modelItem => program.Duration) min
-                            @Html.DisplayFor(modelItem => program.Categories)
-
-                        </li>
+                            <li class="list-group-item">
+                                @Html.DisplayFor(modelItem => program.StartTime)
+                                @Html.DisplayFor(modelItem => program.Title)
+                                <br />
+                                @Html.DisplayFor(modelItem => program.Duration) min
+                                @Html.DisplayFor(modelItem => program.Categories)
+                            </li>
                         }
                     </ul>
                 </div>

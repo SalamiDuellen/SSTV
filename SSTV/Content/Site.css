@@ -3,7 +3,6 @@
     padding-bottom: 2px;
 }
 
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -77,13 +76,16 @@ textarea {
     border-bottom-width: 1px;
 }
 
-.list-group {
+
+.list-group{
     border: 2px solid #BDD4DE;
     border-top-width: 1px;
     /*background-color: #eaf3f7;*/
 }
 
-.list-group-item {
+
+
+.list-group-item{
     border: none;
     padding: 1% 4% 1% 4%;
     margin: 0%;
